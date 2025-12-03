@@ -36,6 +36,17 @@
             margin-bottom: 20px;
             white-space: pre-line; /* preserves line breaks */
         }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border: 2px solid #555;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
@@ -89,10 +100,20 @@
         This is the final section. It is designed to run and save all of the plots with the varying frame skips. This is similar to a main method of sorts. It runs through all of the methods in an organized manner. It also allows me to save in between runs. That way I do not lose any data if the google colab exceeds its time limit.
     </div>
 
+    <!-- PNG Before Results -->
+    <div class="image-container">
+        <img src="Results_Graphs.png" alt="Results Graphs">
+    </div>
+
     <!-- Results Section -->
     <h2>Results</h2>
     <div class="section-box">
         Despite the fact that FairMOT uses YOLOv8 as its detector, it was not able to gain a significant advantage. Its results were similar to the YOLOv8 with the two algorithms seeing advantages depending on the video used. As such, the extra cost for the tracking portion does not outweigh using the base YOLOv8 algorithm.
+    </div>
+
+    <!-- References PNG at the end of the page -->
+    <div class="image-container">
+        <img src="References_PNG.png" alt="References">
     </div>
 
 </body>
