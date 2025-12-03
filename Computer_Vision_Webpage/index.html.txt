@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Vision Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #FFD8A8; /* Light orange background */
+        }
+
+        h1 {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .textbox {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <h1>Computer Vision Project: The effects of Frame Skipping on Object Tracking Algorithms</h1>
+
+    <!-- Three text boxes above the video -->
+    <input class="textbox" type="text" placeholder="Text Box 1">
+    <input class="textbox" type="text" placeholder="Text Box 2">
+    <input class="textbox" type="text" placeholder="Text Box 3">
+
+
+    <input class="textbox" type="text" placeholder="Text Box Under Video">
+
+</body>
+</html>
