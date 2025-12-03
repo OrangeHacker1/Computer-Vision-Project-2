@@ -7,42 +7,93 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             padding: 20px;
-            background-color: #FFD8A8; /* Light orange background */
+            background-color: #FFD8A8; /* Light orange */
+            line-height: 1.5;
         }
 
         h1 {
             background-color: black;
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             border-radius: 6px;
+            margin-bottom: 30px;
         }
 
-        .textbox {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-size: 16px;
-            box-sizing: border-box;
+        h2 {
+            margin-top: 30px;
+            color: #333;
         }
 
+        .section-box {
+            background: #fff;
+            border: 2px solid #555;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            white-space: pre-line; /* preserves line breaks */
+        }
     </style>
 </head>
 <body>
 
     <h1>Computer Vision Project: The effects of Frame Skipping on Object Tracking Algorithms</h1>
 
-    <!-- Three text boxes above the video -->
-    <input class="textbox" type="text" placeholder="Text Box 1">
-    <input class="textbox" type="text" placeholder="Text Box 2">
-    <input class="textbox" type="text" placeholder="Text Box 3">
+    <!-- Main Description Sections -->
+    
+    <h2>Project Overview</h2>
+    <div class="section-box">
+        This project is designed to test the efficiency and durability of the Training, Detection, Learning (TLD) algorithm, the FairMOT algorithm, and the You Only Look Once version 8 (YOLOv8) algorithm. This project aims to test the effects of skipping frames on these algorithms.
+    </div>
 
+    <h2>Study Design</h2>
+    <div class="section-box">
+        In this study, I wanted to test the ‘durability’ of current day image tracking methods. To accomplish this, the code is broken into 5 major sections.
+        1. Imports and Installs.
+        2. Image Tracking Methods.
+        3. Helper Methods and Cleaning.
+        4. Processing Main Method.
+        5. Testing and Parameters.
+    </div>
 
-    <!-- Text box below video -->
-    <input class="textbox" type="text" placeholder="Text Box Under Video">
+    <!-- Section 1 -->
+    <h2>Section 1</h2>
+    <div class="section-box">
+        This section is dedicated to get all of the downloads and installs required to run the object tracking algorithms and the methods to find the bounding boxes.
+    </div>
+
+    <!-- Section 2 -->
+    <h2>Section 2</h2>
+    <div class="section-box">
+        This section is dedicated to storing all of the necessary methods/algorithms. This is where the TLD, YOLOv8, and FairMOT methods will be stored. They will also be capable of dealing with frame skips. They should return the time to calculate and the bounding boxes.
+    </div>
+
+    <!-- Section 3 -->
+    <h2>Section 3</h2>
+    <div class="section-box">
+        This method is designed to store all of the helper methods. This includes the methods for generating plots, the method for getting the ground truth values, and the methods required for cleaning the videos to run the algorithms (the dataset used required a method to create an MP4 file.).
+    </div>
+
+    <!-- Section 4 -->
+    <h2>Section 4</h2>
+    <div class="section-box">
+        This section is dedicated to actually running the code. It contains helper methods to run all of the mp4 files and calculate the Intersection of Union (IoU) average values for each algorithm for each image. It is also responsible for returning the average time required to repeat each algorithm for each frame. This is used to create the graph to calculate the average time taken per frame. It is also responsible for returning plots for each method going through each individual video. This can be used for debugging purposes, but they are unable to fit within the poster. (There are a total of 24 additional plots.)
+    </div>
+
+    <!-- Section 5 -->
+    <h2>Section 5</h2>
+    <div class="section-box">
+        This is the final section. It is designed to run and save all of the plots with the varying frame skips. This is similar to a main method of sorts. It runs through all of the methods in an organized manner. It also allows me to save in between runs. That way I do not lose any data if the google colab exceeds its time limit.
+    </div>
+
+    <!-- Results Section -->
+    <h2>Results</h2>
+    <div class="section-box">
+        Despite the fact that FairMOT uses YOLOv8 as its detector, it was not able to gain a significant advantage. Its results were similar to the YOLOv8 with the two algorithms seeing advantages depending on the video used. As such, the extra cost for the tracking portion does not outweigh using the base YOLOv8 algorithm.
+    </div>
 
 </body>
 </html>
