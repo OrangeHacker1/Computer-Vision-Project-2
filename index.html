@@ -47,19 +47,50 @@
             border: 2px solid #555;
             border-radius: 6px;
         }
+
+        a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
     <h1>Computer Vision Project: The effects of Frame Skipping on Object Tracking Algorithms</h1>
 
-    <!-- Main Description Sections -->
-    
+    <!-- Project Overview -->
     <h2>Project Overview</h2>
     <div class="section-box">
         This project is designed to test the efficiency and durability of the Training, Detection, Learning (TLD) algorithm, the FairMOT algorithm, and the You Only Look Once version 8 (YOLOv8) algorithm. This project aims to test the effects of skipping frames on these algorithms.
     </div>
 
+    <!-- Methods to test -->
+    <h2>Methods to test</h2>
+    <div class="section-box">
+<strong>YOLOv8:</strong> YOLOv8 is a single stage-detector that ranks among the most popular object tracking algorithms. The YOLO family of models is based on a CNN architecture that learns to predict object labels and positions with a single pass of the image. 
+
+The model v8 follows a similar architecture to its predecessor and consists of various CNN and fully connected layers. It is an anchor-free algorithm, which directly predicts the object’s center rather than an offset from a predefined anchor. Moreover, the algorithm can be used for classification, segmentation, pose estimation, object detection, and tracking.
+
+<strong>FairMOT:</strong> The fair multi-object tracking FairMOT algorithm uses a pre-trained model like faster R-CNN for detecting objects in the video sequence. It then uses a neural network to extract features from the detected object.
+
+These features are used to track the object across other frames. The branches share the same underlying architecture and receive equal weightage during training.
+
+The FairMOT algorithm treats all classes fairly and provides a balanced performance between the two tasks: detection and tracking.
+
+For this project, I will be using the YOLOv8 algorithm in order to keep the amount of variables fixed.
+
+<strong>TLD:</strong> TLD is a framework designed for long-term tracking of an unknown object in a video sequence. The three components serve the following purpose:
+
+- Tracker: Predicts the object location in the next frame using information in the current frame. This module uses techniques like mean-shift or correlation filtering.
+- Detector: Scans the input frame-by-frame for potential objects using previously learned object appearances.
+- Learning: Observes the tracker's and the detector's performance and identifies their errors. It further generates training samples to teach the detector to avoid mistakes in the future.
+    </div>
+
+    <!-- Study Design -->
     <h2>Study Design</h2>
     <div class="section-box">
         In this study, I wanted to test the ‘durability’ of current day image tracking methods. To accomplish this, the code is broken into 5 major sections.
@@ -111,7 +142,7 @@
         Despite the fact that FairMOT uses YOLOv8 as its detector, it was not able to gain a significant advantage. Its results were similar to the YOLOv8 with the two algorithms seeing advantages depending on the video used. As such, the extra cost for the tracking portion does not outweigh using the base YOLOv8 algorithm.
     </div>
 
-    <!-- NEW PAPER SECTION -->
+    <!-- Paper Section -->
     <h2>Paper</h2>
     <div class="image-container">
         <img src="Paper_CV.jpg" alt="Research Paper Image">
@@ -122,7 +153,15 @@
         <img src="References_PNG.png" alt="References Image">
     </div>
 
-    <!-- FINAL REFERENCES TEXT SECTION -->
+    <!-- GitHub Code Section -->
+    <h2>GitHub Code</h2>
+    <div class="section-box">
+        <a href="https://github.com/OrangeHacker1/Computer-Vision-Code" target="_blank">
+            https://github.com/OrangeHacker1/Computer-Vision-Code
+        </a>
+    </div>
+
+    <!-- References Section -->
     <h2>References</h2>
     <div class="section-box">
 [1] Ultralytics, “YOLOv8,” docs.ultralytics.com, Nov. 12, 2023. https://docs.ultralytics.com/models/yolov8/
